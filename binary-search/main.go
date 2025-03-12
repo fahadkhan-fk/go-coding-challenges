@@ -30,3 +30,6 @@ func binarySearch(target int, nums []int) int {
 	}
 	return -1
 }
+
+// O(log n) time complexity
+// More memory-efficient (O(1) space complexity)
