@@ -1,3 +1,9 @@
+// Problem: Palindrome Number (LeetCode #9)
+// Problem Statement
+// Given an integer x, return true if x is a palindrome, and false otherwise.
+
+// A palindrome is a number (or string) that reads the same forward and backward.
+
 package main
 
 import (
@@ -5,23 +11,23 @@ import (
 )
 
 func main() {
-	var n int = 101
-	fmt.Println("is Palindrome: ", isPalindrome(n))
+	var x int = 101
+	fmt.Println("is Palindrome: ", isPalindrome(x))
 }
 
-func isPalindrome(n int) bool {
-	if n < 0 || (n%10 == 0 && n != 0) {
+func isPalindrome(x int) bool {
+	if x < 0 || (x%10 == 0 && x != 0) {
 		return false
 	}
 
 	reversed := 0
 
-	for n > reversed {
-		reversed = reversed*10 + n%10
-		n = n / 10
+	for x > reversed {
+		reversed = reversed*10 + x%10
+		x = x / 10
 	}
 
-	return reversed == n || n == reversed/10
+	return reversed == x || x == reversed/10
 }
 
 // Time	Complexity O(log₁₀(n))
