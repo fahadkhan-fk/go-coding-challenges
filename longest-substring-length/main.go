@@ -33,3 +33,25 @@ func lengthOfLongestSubstring(s string) int {
 	}
 	return maxLength
 }
+
+// Alternative approach
+// func isUnique(s string) int {
+// 	hash := make(map[rune]bool)
+// 	left := 0
+// 	max := 0
+
+// 	for idx, r := range s {
+// 		if hash[r] == true {
+// 			left++
+// 			continue
+// 		}
+
+// 		if !hash[r] {
+// 			hash[r] = true
+// 			if max < (idx+1)-left {
+// 				max = (idx + 1) - left
+// 			}
+// 		}
+// 	}
+// 	return max
+// }
