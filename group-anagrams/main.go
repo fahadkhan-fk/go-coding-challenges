@@ -59,3 +59,7 @@ func sortWordAlphabetically(word string) string {
 	})
 	return string(runes)
 }
+
+// Time	O(n * k log k) --> n = len(s) → number of strings, k = average length of each string
+
+// Space	O(n * k)  --> Keys are sorted strings of length, k → total possible keys up to n
